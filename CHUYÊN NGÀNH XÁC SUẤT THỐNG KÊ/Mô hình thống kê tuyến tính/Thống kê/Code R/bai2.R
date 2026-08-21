@@ -1,0 +1,30 @@
+y=c(12,14,10,16,14,19,21,19,21,16,19,21,25,21)
+x1=c(2,1,3,6,7,8,8,5,5,8,4,9,12,7)
+x2=c(45,43,43,47,42,41,32,33,41,38,32,31,35,29)
+x3=c(121,132,154,145,129,156,132,147,128,163,161,172,174,180)
+#1
+y1=lm(y~x1+x2)
+y2=lm(y~x2+x3)
+y3=lm(y~x1+x3)
+#2
+summary(y1)
+summary(y2)
+summary(y3)
+#3
+confint(y1)
+#4
+summary(y1)
+summary(y2)
+summary(y3)
+#5 So sanh R_squared
+#6 Mo hinh ma tran
+#7 
+y4=lm(y~x1+x2+x3)
+summary(y4)
+#8
+anova(y4)
+vcov(y4)
+#10
+summary(lm(y~x1))
+summary(y1)
+summary(y3)

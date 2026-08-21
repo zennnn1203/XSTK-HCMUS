@@ -1,0 +1,135 @@
+##
+## Lab1 - Linear regression and Box-Cox transform
+##
+## Vi du 1: data(cement)
+library(SMPracticals)
+data(cement)
+plot(cement, pch = 16)
+## fitting linear model
+model.eg1 <- lm(formula = y ~ x1 + x3 + x4, data = cement)
+##
+## coeficients:
+coef(model.eg1)
+##
+## Tom ta thong ke cho mo hinh hoi quy tuyen tinh
+## y = beta0 + beta1*x1 + beta2*x2 + beta3*x3
+summary(model.eg1)
+##
+## Confident interval
+confint(model.eg1, level = 0.95)
+##
+## Cac bieu do phan tich Residuals
+par(mfrow = c(2,2))
+plot(model.eg1, which=c(1,2,3,5),pch = 16)
+##
+################################################################################
+################################################################################
+################################################################################
+##
+##*****     Bien doi Box-Cox
+##
+##
+##--------------------------------------------------------
+##
+## Cach 1: Viet ham 
+##         + Viet ham tinh profile-lig likelihood ;
+##         + Tim gia tri lambda toi uu; 
+##         + Viet ham thuc hien bien doi Box-Cox;
+##
+##
+## Ham thuc hien bien doi Box-Cox:
+##
+boxcox_trans <- function(x, lambda){
+  if(lambda == 0) log(x)
+  else (x^lambda - 1)/lambda
+}
+##
+##------------------------------------------------------------------------------
+## Ham tinh profile-log likelihood
+##
+pl <- function(lambda, formula, data){
+  y <- model.extract(model.frame(formula, data = data), "response")
+  y_bcx <- boxcox_trans(x = y, lambda = lambda)
+  data$y_bcx <- y_bcx
+  new_formula <- update(formula, y_bcx ~ . )
+  out_lm <- lm(new_formula, data = data)
+  pl_res <- -0.5*length(y)*log(mean(resid(out_lm)^2)) + (lambda - 1)*sum(log(y))
+  return(pl_res)
+}
+##
+##------------------------------------------------------------------------------
+##
+## Vi du 2: data(poisons) co trong library(SMPracticals)
+library(SMPracticals)
+data(poisons)
+head(poisons)
+##
+## Tim gia tri toi uu cho tham so lambda
+out_optim_pl <- optimize(f = pl, interval = c(-2, 2), maximum = TRUE, 
+                         formula = time ~ treat + poison, data = poisons)
+##
+## gia tri toi uu cho lambda la
+print(out_optim_pl)
+##
+##
+## Ve do thi tuong ung cho ham profile-log likelihood de the hien gia tri lambda 
+## vua tim duoc la phu hop
+x_lambda <- seq(-2, 2, by = 0.1)
+pl_est <- sapply(x_lambda, FUN = function(x) {
+  pl(lambda = x, formula = time ~ treat + poison, data = poisons)
+})
+plot(x_lambda, pl_est, type = "l", xlab="lambda", ylab="profile-log likelihood")
+abline(v = out_optim_pl$maximum, lty = 2)
+##
+##
+##------------------------------------------------------------------------------
+## Viet ham tinh khoang tin cay
+##
+pl_interval <- function(formula, data, out_pl, ci.lev){
+  ff <- function(lambda, formula, data, max.vals, ci.lev){
+    pl_res <- pl(lambda = lambda, formula = formula, data = data)
+    out <- pl_res - max.vals + 0.5*qchisq(ci.lev, 1)
+    return(out)
+  }
+  lambda_l <- uniroot(f = ff, interval = c(-2, out_pl$maximum), formula = formula,
+                      data = data, max.vals = out_pl$objective, ci.lev = ci.lev)$root
+  lambda_u <- uniroot(f = ff, interval = c(out_pl$maximum, 2), formula = formula, 
+                      data = data, max.vals = out_pl$objective, ci.lev = ci.lev)$root
+  return(c(lambda_l, lambda_u))
+}
+##
+##------------------------------------------------------------------------------
+## 
+## Tim khaong tin cay 95% cho lambda
+ci_lambda <- pl_interval(formula = time ~ treat + poison, data = poisons, out_pl = out_optim_pl,
+                         ci.lev = 0.95)
+ci_lambda
+##
+## Ve do thi the hien khoang tin cay 95% vua tim duoc 
+plot(x_lambda, pl_est, type = "l", xlab = "lambda", ylab = "profile-log likelihood")
+abline(v = ci_lambda, lty = 2)
+##
+##==============================================================================
+##
+## Voi gia tri phu hop cho lambda vua tim duoc, thuc hien bien doi Box-Cox
+##
+out_md_bcx1 <- lm(boxcox_trans(time, -1) ~ treat + poison, data = poisons)
+summary(out_md_bcx1)
+##
+## Ket qua kiem dinh mo hinh sau khi thuc hien bien doi Box-Cox:
+par(mfrow = c(2, 2))
+plot(out_md_bcx1, pch = 16)
+##
+##==============================================================================
+##==============================================================================
+##
+## Cach 2: su dung ham boxcox() trong thu vien MASS cua R
+##
+library(MASS)
+out_lm_poisons <- lm(formula = time ~ treat + poison, data = poisons)
+out_bc_poisons <- boxcox(out_lm_poisons, lambda = seq(-2, 2, 1/10), plotit = TRUE)
+##
+## Su dung ham boxcox(), ta tim duoc gia tri toi tuu cho lambda la:
+out_bc_poisons$x[which.max(out_bc_poisons$y)]
+##
+##==============================================================================
