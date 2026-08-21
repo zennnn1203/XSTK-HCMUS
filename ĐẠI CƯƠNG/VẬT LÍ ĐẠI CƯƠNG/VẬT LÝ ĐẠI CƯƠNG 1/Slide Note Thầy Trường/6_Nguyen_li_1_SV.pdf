@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="vi" xml:lang="vi">
+<head>
+    <title>Đăng nhập vào trang | HCMUS Moodle</title>
+    <link rel="shortcut icon" href="https://courses.hcmus.edu.vn/pluginfile.php/1/core_admin/favicon/64x64/1763858092/HCMUS.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, Đăng nhập vào trang | HCMUS Moodle" />
+<link rel="stylesheet" type="text/css" href="https://courses.hcmus.edu.vn/theme/yui_combo.php?rollup/3.18.1/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://courses.hcmus.edu.vn/theme/styles.php/academi/1763858092_1/all" />
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/courses.hcmus.edu.vn","apibase":"https:\/\/courses.hcmus.edu.vn\/r.php\/api","homeurl":{},"sesskey":"B2bd6ty8Rl","sessiontimeout":"54000","sessiontimeoutwarning":"1800","themerev":"1763858092","slasharguments":1,"theme":"academi","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1763858092","admin":"admin","svgicons":true,"usertimezone":"Asia\/Ho_Chi_Minh","language":"vi","courseId":1,"courseContextId":2,"contextid":1,"contextInstanceId":0,"langrev":1764279727,"templaterev":"1763858092","siteId":1,"userId":0};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/courses.hcmus.edu.vn\/lib\/yuilib\/3.18.1\/","comboBase":"https:\/\/courses.hcmus.edu.vn\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/courses.hcmus.edu.vn\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/courses.hcmus.edu.vn\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/courses.hcmus.edu.vn\/theme\/yui_combo.php?m\/1763858092\/","combine":true,"comboBase":"https:\/\/courses.hcmus.edu.vn\/theme\/yui_combo.php?","ext":false,"root":"m\/1763858092\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form","datatype-date-format"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]}}},"gallery":{"name":"gallery","base":"https:\/\/courses.hcmus.edu.vn\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/courses.hcmus.edu.vn\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1763858092\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/courses.hcmus.edu.vn\/lib\/javascript.php\/1763858092\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/courses.hcmus.edu.vn\/lib\/javascript.php\/1763858092\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]}},"logInclude":[],"logExclude":[],"logLevel":null};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body  id="page-login-index" class="format-site  path-login ios dir-ltr lang-vi yui-skin-sam yui3-skin-sam courses-hcmus-edu-vn pagelayout-login course-1 context-1 notloggedin theme ">
+    <div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+    <div id="page-wrapper">
+        <div>
+    <a class="visually-hidden-focusable" href="#maincontent">Chuyển tới nội dung chính</a>
+</div><script src="https://courses.hcmus.edu.vn/lib/javascript.php/1763858092/lib/polyfills/polyfill.js"></script>
+<script src="https://courses.hcmus.edu.vn/theme/yui_combo.php?rollup/3.18.1/yui-moodlesimple-min.js"></script><script src="https://courses.hcmus.edu.vn/lib/javascript.php/1763858092/lib/javascript-static.js"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+        
+<nav id="header" class=" moodle-based-header  fixed-top navbar navbar-light bg-faded navbar-static-top navbar-expand moodle-has-zindex" aria-label="Định hướng trang">
+    <div class="container-fluid navbar-nav">
+             
+                <button class="navbar-toggler aabtn d-block d-md-none px-1 my-1 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-primary">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="sr-only">Bảng điều khiển cạnh</span>
+                </button>
+                <a href="https://courses.hcmus.edu.vn/?redirect=0" class="navbar-brand has-logo
+                        ">
+                            <span class="logo">
+                                <img src="//courses.hcmus.edu.vn/pluginfile.php/1/theme_academi/logo/1763858092/HCMUS.ico" alt="Hệ thống quản lý học tập, VNUHCM-US">
+                            </span>
+                </a>
+
+
+             
+                    <div class="primary-navigation">
+                        <nav class="moremenu navigation">
+                            <ul id="moremenu-693f65a73802d-navbar-nav" role="menubar" class="nav more-nav navbar-nav">
+                                        <li data-key="home" class="nav-item" role="none" data-forceintomoremenu="false">
+                                                    <a role="menuitem" class="nav-link active "
+                                                        href="https://courses.hcmus.edu.vn/"
+                                                        
+                                                        aria-current="true"
+                                                        data-disableactive="true"
+                                                        
+                                                    >
+                                                        Trang chủ
+                                                    </a>
+                                        </li>
+                                <li role="none" class="nav-item dropdown dropdownmoremenu d-none" data-region="morebutton">
+                                    <a class="dropdown-toggle nav-link " href="#" id="moremenu-dropdown-693f65a73802d" role="menuitem" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" tabindex="-1">
+                                        Xem thêm
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-start" data-region="moredropdown" aria-labelledby="moremenu-dropdown-693f65a73802d" role="menu">
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                <ul class="navbar-nav d-none d-md-flex my-1 px-1">
+                    <!-- page_heading_menu -->
+                    
+                </ul>
+
+        <div id="usernavigation" class="navbar-nav">
+                <div class="langmenu">
+                    <div class="dropdown show">
+                        <a href="#" role="button" id="lang-menu-toggle" data-bs-toggle="dropdown" aria-label="Ngôn ngữ" aria-haspopup="true" aria-controls="lang-action-menu" class="btn dropdown-toggle">
+                            <i class="icon fa fa-language fa-fw me-1" aria-hidden="true"></i>
+                            <span class="langbutton">
+                                Vietnamese ‎(vi)‎
+                            </span>
+                            <b class="caret"></b>
+                        </a>
+                        <div role="menu" aria-labelledby="lang-menu-toggle" id="lang-action-menu" class="dropdown-menu dropdown-menu-end">
+                                    <a href="https://courses.hcmus.edu.vn/login/index.php?lang=en" class="dropdown-item ps-5" role="menuitem" 
+                                            lang="en" >
+                                        English ‎(en)‎
+                                    </a>
+                                    <a href="#" class="dropdown-item ps-5" role="menuitem" aria-current="true"
+                                            >
+                                        Vietnamese ‎(vi)‎
+                                    </a>
+                        </div>
+                    </div>
+                </div>
+            
+            
+            <div class="d-flex align-items-stretch usermenu-container" data-region="usermenu">
+                    <div class="usermenu">
+                            <span class="login ps-2">
+                                    <a href="https://courses.hcmus.edu.vn/login/index.php">Đăng nhập</a>
+                            </span>
+                    </div>
+            </div>
+            
+        </div>
+        <!-- search_box -->
+    </div>
+</nav>
+
+<div  class="drawer drawer-left drawer-primary d-print-none not-initialized" data-region="fixed-drawer" id="theme_boost-drawers-primary" data-preference="" data-state="show-drawer-primary" data-forceopen="0" data-close-on-resize="1">
+    <div class="drawerheader">
+        <button
+            class="btn btn-icon drawertoggle hidden"
+            data-toggler="drawers"
+            data-action="closedrawer"
+            data-target="theme_boost-drawers-primary"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="Đóng trình vẽ"
+        >
+            <i class="icon fa fa-xmark fa-fw " aria-hidden="true" ></i>
+        </button>
+                <a
+            href="https://courses.hcmus.edu.vn/"
+            title="Hệ thống quản lý học tập, VNUHCM-US"
+            data-region="site-home-link"
+            class="aabtn text-reset d-flex align-items-center py-1 h-100"
+        >
+                <span class="sitename" title="Hệ thống quản lý học tập, VNUHCM-US">Hệ thống quản lý học tập, VNUHCM-US</span>
+        </a>
+
+        <div class="drawerheadercontent hidden">
+            
+        </div>
+    </div>
+    <div class="drawercontent drag-container" data-usertour="scroller">
+                <div class="list-group">
+                <a href="https://courses.hcmus.edu.vn/" class="list-group-item list-group-item-action active " aria-current="true">
+                    Trang chủ
+                </a>
+        </div>
+
+    </div>
+</div>
+        
+        <div id="page" class="container-fluid mt-0">
+            <div id="page-content" class="row">
+                <div id="region-main-box" class="col-12">
+                    <section id="region-main" class="col-12 h-100" aria-label="Nội dung">
+                    <div class="login-wrapper">
+                        <div class="login-container">
+                        <div role="main"><span id="maincontent"></span><div class="loginform">
+        <div id="loginlogo" class="login-logo">
+            <img id="logoimage" src="https://courses.hcmus.edu.vn/pluginfile.php/1/core_admin/logo/0x200/1763858092/Logo%20phu%20sub%20Viet%20%282%29.png" class="img-fluid" alt="Hệ thống quản lý học tập, VNUHCM-US"/>
+            <h1 class="login-heading visually-hidden">Đăng nhập vào Hệ thống quản lý học tập, VNUHCM-US</h1>
+        </div>
+        <form class="login-form" action="https://courses.hcmus.edu.vn/login/index.php" method="post" id="login">
+            <input id="anchor" type="hidden" name="anchor" value="">
+            <script>document.getElementById('anchor').value = location.hash;</script>
+            <input type="hidden" name="logintoken" value="QL9etHBBhrTu4paFO4U77k7677II4pWA">
+            <div class="login-form-username mb-3">
+                <label for="username" class="visually-hidden">
+                        Tên tài khoản
+                </label>
+                <input type="text" name="username" id="username" class="form-control form-control-lg" value="" placeholder="Tên tài khoản" autocomplete="username">
+            </div>
+            <div class="login-form-password mb-3">
+                <label for="password" class="visually-hidden">Mật khẩu</label>
+                <input type="password" name="password" id="password" value="" class="form-control form-control-lg" placeholder="Mật khẩu" autocomplete="current-password">
+            </div>
+            <div class="login-form-submit mb-3">
+                <button class="btn btn-primary btn-lg" type="submit" id="loginbtn">Đăng nhập</button>
+            </div>
+            <div class="login-form-forgotpassword mb-3">
+                <a href="https://courses.hcmus.edu.vn/login/forgot_password.php">Quên mật khẩu?</a>
+            </div>
+        </form>
+        <div class="login-divider"></div>
+        <div class="login-identityproviders">
+            <h2 class="login-heading">Đăng nhập bằng tài khoản trên:</h2>
+                <a class="btn login-identityprovider-btn w-100" href="https://courses.hcmus.edu.vn/auth/oauth2/login.php?id=1&amp;sesskey=B2bd6ty8Rl&amp;wantsurl=https%3A%2F%2Fcourses.hcmus.edu.vn%2Fpluginfile.php%2F302733%2Fmod_resource%2Fcontent%2F1%2F6_Nguyen_li_1_SV.pdf">
+                        <img src="https://res.cdn.office.net/officehub/images/content/images/favicon_copilot-4370172aa6.ico" alt="" width="24" height="24"/>
+                    Microsoft 365
+                </a>
+                <a class="btn login-identityprovider-btn w-100" href="https://courses.hcmus.edu.vn/auth/oauth2/login.php?id=2&amp;sesskey=B2bd6ty8Rl&amp;wantsurl=https%3A%2F%2Fcourses.hcmus.edu.vn%2Fpluginfile.php%2F302733%2Fmod_resource%2Fcontent%2F1%2F6_Nguyen_li_1_SV.pdf">
+                        <img src="https://accounts.google.com/favicon.ico" alt="" width="24" height="24"/>
+                    Google Workspace
+                </a>
+        </div>
+        <div class="login-divider"></div>
+        <div class="login-instructions ">
+            <h2 class="login-heading"><center>Hướng dẫn đăng nhập</center></h2>
+            <p style="text-align:center;"><a href="https://link.hcmus.edu.vn/login-Moodle-LMS" target="_blank" rel="noreferrer noopener">Link.hcmus.edu.vn/login-Moodle</a></p><p style="text-align:center;">Nếu bạn không truy cập được, vui lòng liên hệ <strong>moodle@hcmus.edu.vn</strong></p>
+        </div>
+    <div class="login-divider"></div>
+    <div class="d-flex">
+            <div class="login-languagemenu">
+                <div class="action-menu moodle-actionmenu" id="action-menu-0" data-enhance="moodle-core-actionmenu">
+                
+                        <div class="menubar d-flex " id="action-menu-0-menubar">
+                
+                            
+                
+                
+                                <div class="action-menu-trigger">
+                                    <div class="dropdown">
+                                        <a
+                                            href="#"
+                                            tabindex="0"
+                                            class=" dropdown-toggle icon-no-margin"
+                                            id="action-menu-toggle-0"
+                                            aria-label="Vietnamese ‎(vi)‎"
+                                            data-bs-toggle="dropdown"
+                                            role="button"
+                                            aria-haspopup="true"
+                                            aria-expanded="false"
+                                            aria-controls="action-menu-0-menu"
+                                        >
+                                            
+                                            Vietnamese ‎(vi)‎
+                                                
+                                            <b class="caret"></b>
+                                        </a>
+                                            <div class="dropdown-menu menu dropdown-menu-end" id="action-menu-0-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-0" role="menu">
+                                                                                                <a href="https://courses.hcmus.edu.vn/login/index.php?lang=en" class="dropdown-item menu-action" data-lang="en" lang="en" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">English ‎(en)‎</span>
+                                        </a>
+                                                                                                <a href="#" class="dropdown-item menu-action" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Vietnamese ‎(vi)‎</span>
+                                        </a>
+                                            </div>
+                                    </div>
+                                </div>
+                
+                        </div>
+                
+                </div>
+            </div>
+            <div class="divider border-start align-self-center mx-3"></div>
+        <button type="button" class="btn btn-secondary"  data-modal="alert" data-modal-title-str='["cookiesenabled", "core"]'  data-modal-content-str='["cookiesenabled_help_html", "core"]'>Thông báo từ các Cookies</button>
+    </div>
+</div></div>
+                        </div>
+                    </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <footer id="page-footer" class="footer-popover footer-dark text-light">
+            <div id="footer" >
+                    <div class="footer-main">
+                        <div class="container-fluid">
+                            <div id="course-footer">
+                                
+                            </div>
+                            <div class="row">
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="infoarea">
+                                                    <h2>VNUHCM-US</h2>
+                                                        <div class="footer-logo">
+                                                            <a href="#"><img src="//courses.hcmus.edu.vn/pluginfile.php/1/theme_academi/footerlogo/1763858092/hcmus-logo-white.png" width="100" height="100" alt="Academi"></a>
+                                                        </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-lg-3 col-md-6 footer-links-block">
+                                            <div class="foot-links">
+                                                    <h2>Website</h2>
+                                                    <ul>
+                                                        <a class="nav-item nav-link" href="https://www.hcmus.edu.vn" >www.hcmus.edu.vn</a>
+                                                    </ul>
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="contact-info">
+                                                    <h2>Địa chỉ</h2>
+                                                    <p>Cơ sở 1: 227 Nguyễn Văn Cừ, Phường Chợ Quán, Thành phố Hồ Chí Minh - Cơ sở 2: Khu đô thị ĐHQG-HCM, Phường Đông Hòa, Thành phố Hồ Chí Minh</p>
+                                                    <p><i class="fa fa-phone-square"></i> Điện thoại : (028) 62884499</p>
+                                                    <p><i class="fa fa-envelope"></i> Email : <a class="mail-link" href="mailto:info@hcmus.edu.vn">info@hcmus.edu.vn</a></p>
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="social-media">
+                                                    <h2>Theo dõi</h2>
+                                                <ul>
+                                                            <li class="smedia-1">
+                                                                <a href="https://www.facebook.com/VNUHCM.US" target="_blank" style="background-color: #3598dc">
+                                                                    <span class="media-icon">
+                                                                        <i class="fa fa-facebook-f"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="smedia-2">
+                                                                <a href="https://www.youtube.com/channel/UCYtIjCGvl-VNizt_XWk9Uzg?" target="_blank" style="background-color: #e84c3d">
+                                                                    <span class="media-icon">
+                                                                        <i class="fa fa-youtube"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                            <li class="smedia-3">
+                                                                <a href="https://www.linkedin.com/school/vnuhcm---university-of-science/" target="_blank" style="background-color: #0467D7">
+                                                                    <span class="media-icon">
+                                                                        <i class="fa fa-linkedin"></i>
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                            <p>Được cung cấp bởi <a href="https://moodle.org" target="_blank" rel="noopener noreferrer">Moodle</a></p>
+                        <div class="footer-content-debugging">
+                            <div class="container"></div>
+                        </div>
+                    </div>
+                <div data-region="footer-container-popover">
+                    <button class="btn btn-icon bg-secondary icon-no-margin btn-footer-popover" data-action="footer-popover" aria-label="Show footer">
+                        <i class="icon fa fa-question fa-fw " aria-hidden="true" ></i>
+                    </button>
+                </div>
+                <div class="footer-content-popover container" data-region="footer-content-popover">
+                        <div class="footer-section p-3 border-bottom">
+    
+    
+                                <div><a href="https://link.hcmus.edu.vn/login-Moodle-LMS" target="blank"><i class="icon fa-regular fa-envelope fa-fw " aria-hidden="true" ></i>Hỗ trợ truy cập<i class="icon fa fa-arrow-up-right-from-square fa-fw ms-1" aria-hidden="true" ></i></a></div>
+                        </div>
+    
+                    <div class="footer-section p-3 border-bottom">
+                        <div class="logininfo">
+                            <div class="logininfo">Bạn chưa đăng nhập.</div>
+                        </div>
+                        <div class="tool_usertours-resettourcontainer">
+                        </div>
+                        <div id="theme_switch_link"><a rel="nofollow" href="https://courses.hcmus.edu.vn/theme/switchdevice.php?url=https%3A%2F%2Fcourses.hcmus.edu.vn%2Flogin%2Findex.php&amp;device=default&amp;sesskey=B2bd6ty8Rl">Chuyển đổi giao diện chuẩn</a></div>
+                        <script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://courses.hcmus.edu.vn/lib/requirejs.php/1763858092/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://courses.hcmus.edu.vn/lib/javascript.php/1763858092/lib/jquery/jquery-3.7.1.min',
+        jqueryui: 'https://courses.hcmus.edu.vn/lib/javascript.php/1763858092/lib/jquery/ui-1.14.1/jquery-ui.min',
+        jqueryprivate: 'https://courses.hcmus.edu.vn/lib/javascript.php/1763858092/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://courses.hcmus.edu.vn/lib/javascript.php/1763858092/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+M.util.js_pending('filter_mathjaxloader/loader'); require(['filter_mathjaxloader/loader'], function(amd) {amd.configure({"mathjaxurl":"https:\/\/cdn.jsdelivr.net\/npm\/mathjax@3.2.2\/es5\/tex-mml-chtml.js","mathjaxconfig":"","lang":"vi"}); M.util.js_complete('filter_mathjaxloader/loader');});;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('vi');
+});;
+M.util.js_pending('filter_glossary/autolinker'); require(['filter_glossary/autolinker'], function(amd) {amd.init(); M.util.js_complete('filter_glossary/autolinker');});;
+M.util.js_pending('theme_academi/theme'); require(['theme_academi/theme'], function(amd) {amd.init(); M.util.js_complete('theme_academi/theme');});;
+
+require(['jquery', 'core/custom_interaction_events'], function($, CustomEvents) {
+    CustomEvents.define('#single_select693f65a72ef4a2', [CustomEvents.events.accessibleChange]);
+    $('#single_select693f65a72ef4a2').on(CustomEvents.events.accessibleChange, function() {
+        var ignore = $(this).find(':selected').attr('data-ignore');
+        if (typeof ignore === typeof undefined) {
+            $('#single_select_f693f65a72ef4a1').submit();
+        }
+    });
+});
+;
+
+require(['jquery', 'core/custom_interaction_events'], function($, CustomEvents) {
+    CustomEvents.define('#single_select693f65a72ef4a5', [CustomEvents.events.accessibleChange]);
+    $('#single_select693f65a72ef4a5').on(CustomEvents.events.accessibleChange, function() {
+        var ignore = $(this).find(':selected').attr('data-ignore');
+        if (typeof ignore === typeof undefined) {
+            $('#single_select_f693f65a72ef4a4').submit();
+        }
+    });
+});
+;
+
+    require(['core/moremenu'], function(moremenu) {
+        moremenu(document.querySelector('#moremenu-693f65a73802d-navbar-nav'));
+    });
+;
+
+    require(['core/usermenu'], function(UserMenu) {
+        UserMenu.init();
+    });
+;
+
+M.util.js_pending('theme_boost/drawers:load');
+require(['theme_boost/drawers'], function() {
+    M.util.js_complete('theme_boost/drawers:load');
+});
+;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader', 'theme_boost/drawer'], function(Loader, Drawer) {
+    Drawer.init();
+    M.util.js_complete('theme_boost/loader');
+});
+;
+
+require(['theme_boost/footer-popover'], function(FooterPopover) {
+    FooterPopover.init();
+});
+;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+
+    require(['core/pending'], function(Pending) {
+        const errorMessageDiv = document.getElementById('loginerrormessage');
+        const infoMessageDiv = document.getElementById('logininfomessage');
+        const errorMessage = errorMessageDiv?.textContent.trim();
+        const infoMessage = infoMessageDiv?.textContent.trim();
+        if (errorMessage || infoMessage) {
+            const pendingJS = new Pending('login-move-focus');
+            const usernameField = document.getElementById('username');
+            setTimeout(function() {
+                // Focus on the username field on error.
+                if (errorMessage && usernameField) {
+                    usernameField.focus();
+                }
+                // Append a non-breaking space to the error/status message so screen readers will announce them after page load.
+                if (errorMessage) {
+                    errorMessageDiv.innerHTML += "&nbsp;";
+                }
+                if (infoMessage) {
+                    infoMessageDiv.innerHTML += "&nbsp;";
+                }
+                pendingJS.resolve();
+            }, 500);
+        }
+    });
+        require(['core/togglesensitive'], function(ToggleSensitive) {
+            ToggleSensitive.init("password", 1);
+        });
+    require(['core_form/submit'], function(Submit) {
+        Submit.init("loginbtn");
+    });
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(1, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(null); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"S\u1eeda l\u1ea7n cu\u1ed1i","name":"T\u00ean","error":"L\u1ed7i","info":"Th\u00f4ng tin","yes":"C\u00f3","no":"Kh\u00f4ng","cancel":"H\u1ee7y b\u1ecf","confirm":"X\u00e1c nh\u1eadn","areyousure":"B\u1ea1n c\u00f3 ch\u1eafc kh\u00f4ng?","closebuttontitle":"\u0110\u00f3ng","unknownerror":"L\u1ed7i kh\u00f4ng r\u00f5","file":"T\u1eadp tin","url":"URL","collapseall":"Thu g\u1ecdn to\u00e0n b\u1ed9","expandall":"M\u1edf r\u1ed9ng t\u1ea5t c\u1ea3"},"repository":{"type":"Lo\u1ea1i","size":"K\u00edch th\u01b0\u1edbc","invalidjson":"Chu\u1ed7i JSON kh\u00f4ng h\u1ee3p l\u1ec7","nofilesattached":"Kh\u00f4ng c\u00f3 t\u1ec7p \u0111\u00ednh k\u00e8m","filepicker":"B\u1ed9 ch\u1ecdn t\u1ec7p","logout":"Tho\u00e1t","nofilesavailable":"Kh\u00f4ng c\u00f3 t\u1ec7p","norepositoriesavailable":"Xin l\u1ed7i, kh\u00f4ng c\u00f3 kho n\u00e0o hi\u1ec7n t\u1ea1i c\u1ee7a b\u1ea1n c\u00f3 th\u1ec3 tr\u1ea3 v\u1ec1 c\u00e1c t\u1ec7p theo \u0111\u1ecbnh d\u1ea1ng y\u00eau c\u1ea7u.","fileexistsdialogheader":"T\u1ec7p t\u1ed3n t\u1ea1i","fileexistsdialog_editor":"M\u1ed9t t\u1ec7p c\u00f3 t\u00ean \u0111\u00f3 \u0111\u00e3 \u0111\u01b0\u1ee3c \u0111\u00ednh k\u00e8m trong v\u0103n b\u1ea3n b\u1ea1n \u0111ang s\u1eeda.","fileexistsdialog_filemanager":"M\u1ed9t t\u1ec7p c\u00f3 t\u00ean \u0111\u00e3 \u0111\u01b0\u1ee3c \u0111\u00ednh k\u00e8m","renameto":"\u0110\u1eb7t t\u00ean th\u00e0nh \"{$a}\"","referencesexist":"C\u00f3 {$a} \u0111\u01b0\u1eddng li\u00ean k\u1ebft d\u1eabn t\u1edbi file n\u00e0y","select":"Ch\u1ecdn"},"admin":{"confirmdeletecomments":"B\u1ea1n \u0111\u1ecbnh x\u00f3a c\u00e1c b\u00ecnh lu\u1eadn, b\u1ea1n c\u00f3 ch\u1eafc kh\u00f4ng?","confirmation":"X\u00e1c nh\u1eadn"},"debug":{"debuginfo":"Th\u00f4ng tin g\u1ee1 l\u1ed7i","line":"D\u00f2ng","stacktrace":"Stack trace"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {M.util.help_popups.setup(Y);
+ M.util.js_pending('random693f65a72ef4a9'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random693f65a72ef4a9'); });
+})();
+//]]>
+</script>
+
+                    </div>
+    
+                    <div class="footer-section p-3">
+                        <div>Được cung cấp bởi <a href="https://moodle.com">Moodle</a></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    
+        <a id="backToTop" href="#" class="btn btn-primary btn-lg back-to-top " role="button"><span class="fa fa-angle-up"></span></a>
+    
+    
+    
+
+</body></html>
